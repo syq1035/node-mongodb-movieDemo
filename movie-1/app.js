@@ -21,6 +21,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));   //extended:true 重点
 app.use(express.static(path.join(__dirname,'node_modules')))  //静态文件的路径
 app.use(express.static(path.join(__dirname,'public')))  //静态文件的路径
+app.locals.moment = require('moment');  //引入moment格式化时间
 
 app.listen(port);
 
